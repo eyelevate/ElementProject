@@ -1,16 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { NgModule, Injector } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
+const angular = require('../../angular.json');
+const componentName = 'placeholder-name';
 
 @NgModule({
   declarations: [
-    AppComponent
+    // add base component
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    // add base component
+  ],
+  providers: []
 })
-export class AppModule { }
+export class AppModule {
+  constructor(injector: Injector) {
+    // const custom = createCustomElement( , {injector});
+    // customElements.define($componentName, custom);
+  }
+
+  ngDoBootstrap() {
+
+  }
+}
