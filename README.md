@@ -5,20 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Check your npm dependencies
 run `npm install` in your project root to ensure your project has all of the correct dependencies
 
-## Rename Project
-Rename the project so that it does not conflict with other components in your root project
+## Setup New Project
+1. run `npm run build:deps`
+2. open `./refactor-project.js` and update the `newProjectName` and the `oldProjectName` variables to match your projects needs.
+3. run `npm run refactor` to change your projects namespaces and settings.
+4. create your first base component with `ng g c component-name` replacing component-name with the name of your new component
+5. Update your `./src/app/app.module.ts` with your new base component.
+6. rinse and repeat steps 4-5 for any new sub components you wish to add to your custom element
 
-To do so please refactor the project and include these files in your refactoring:
-1. `./angular.json`
-  - Line(s) Pascal casing: 6, 20, 69, 73, 80, 121, 128 
-2. `./package.json`
-  - Line(s) kebab-case: 2, 
-3. `./src/app/app.module.ts`
-  - create your custom component name replacing: `**placeholder**` 
-4. `./src/index.html`
-  - replace the tag `<app-root></app-root>` with the name of the component you used in step 3.
-5. `./stage-component.js`
-  - on line 5 ensure that your destination path is set to the correct project destination source. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
