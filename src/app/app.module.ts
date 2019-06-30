@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 const angular = require('../../angular.json');
-const componentName = 'placeholder-name';
+const componentName = '**placeholder**';
 
 @NgModule({
   declarations: [
